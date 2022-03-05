@@ -8,6 +8,8 @@
 #include <time.h>
 #include <stdio.h>
 
+// 追加のコメント
+
 int main(void)
 {
 	time_t rawtime;
