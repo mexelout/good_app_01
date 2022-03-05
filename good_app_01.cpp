@@ -1,11 +1,23 @@
 ﻿// good_app_01.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
-#include <iostream>
+#define _CRT_SECURE_NO_WARNINGS
 
-int main()
+#include <iostream>
+#include <time.h>
+#include <stdio.h>
+
+int main(void)
 {
-    std::cout << "Hello World!\n";
+	time_t rawtime;
+	struct tm* timeinfo;
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	printf("現在時刻は: %s", asctime(timeinfo));
+
+	return 0;
 }
 
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
